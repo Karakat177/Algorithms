@@ -41,14 +41,22 @@
 
 ## 📊 Experimental Results
 
-| Algorithm   | Time (ms) | Comparisons | MaxDepth |
-|-------------|-----------|-------------|----------|
-| MergeSort   | 7         | 10532       | 6        |
-| QuickSort   | 0         | 7256        | 8        |
-| Select      | 2         | 8642        | 8        |
-| ClosestPair | 8         | 1727        | 9        |
+Experiments were conducted with input sizes: **100, 500, 1000, 5000, 10000**.
 
----
+| Algorithm   | Size  | Time | Comparisons | Swaps | MaxDepth |
+|-------------|-------|------|-------------|-------|----------|
+| MergeSort   | 100   | 9    | 658         | 392   | 3        |
+| QuickSort   | 100   | 0    | 503         | 180   | 6        |
+| Select      | 100   | 2    | 737         | 185   | 6        |
+| ClosestPair | 100   | 3    | 133         | 0     | 6        |
+| MergeSort   | 1000  | 1    | 10333       | 6936  | 6        |
+| QuickSort   | 1000  | 0    | 8674        | 2601  | 7        |
+| Select      | 1000  | 0    | 9379        | 2235  | 9        |
+| ClosestPair | 1000  | 1    | 1734        | 0     | 9        |
+| ...         | ...   | ...  | ...         | ...   | ...      |
+
+Full dataset is available in:
+- `results.csv`
 
 ## 📈 Plots
 ### Depth vs n
@@ -77,3 +85,4 @@
 - QuickSort is faster than MergeSort on average, though it performs more swaps.
 - Select achieved linear time as expected and returned correct elements.
 - Closest Pair runs in Θ(n log n) and efficiently checks only nearby points in the strip.  
+
